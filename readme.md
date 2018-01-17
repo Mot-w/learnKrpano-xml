@@ -123,11 +123,70 @@
     
     +   onerror: function
         -   krpano渲染出错时调用的回调函数，使用方法参考`onready`
-    
+    +   passQueryParameters: false
+        -   将参数以另外一种方式传入
+        -   示例
+        
+        ```JavaScript
+            tour.html?html5=only&startscene=scene2&initvars.design=flat
+        ```
 
+### 删除全景图播放
+
+*   removepano(id)
+
+```JavaScript
+    embedpano({xml:"tour.xml", target:"pano", html5:"only", mobilescale:1.0, passQueryParameters:true, onready: showLog});
+
+    removepano(pano)
+```
+    
 ### 
 
 ##  静态XML（XML Reference）
+
+### krpano.xml结构分析
+
+####    krpano.xml静态结构如下：
+
+```xml
+    <krpano>
+        <includ>
+        <preview> 
+        <image>
+        <view>
+        <area>
+        <display>
+        <control>
+        <cursors>
+        <autorotate>
+        <plugin>
+        <layer>
+        <hotspot>
+        <style>
+        <events>
+        <action>
+        <contextmenu>
+        <network>
+        <memory>
+        <security>
+        <textstyle>
+        <lensflareset>
+        <lensflare>
+        <data>
+        <scene>
+        <set>
+        <debug>
+    </krpano>
+```
+
+####    krpano.xml静态结构分析
+
+
+
+### 特殊的krpano.xml的元素和属性
+
+### xml元素/属性/属性值/变量
 
 ##  动态XML（Actions / Scripting）
 
